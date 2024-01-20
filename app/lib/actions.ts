@@ -12,9 +12,10 @@ const FormSchema = z.object({
     title: z.string(),
     content: z.string(),
     date: z.string(),
+    imageUrl: z.string()
 })
 
-const CreateArticle = FormSchema.omit({ id: true, date: true });
+const CreateArticle = FormSchema.omit({ id: true, date: true, imageUrl: true });
 
 export type State = {
     errors?: {
@@ -33,8 +34,8 @@ export async function uploadImage(imageFile: File) {
 
 export async function createArticle(prevState: State, formData: FormData)  {
     const validatedFields = CreateArticle.safeParse({
-        // TODO: take id from current user
-        userId: '0761c587-5eb9-4570-bbaa-d596d9aceccb',
+        // TODO: take id from authenticated user
+        userId: '410544b2-4001-4271-9855-fec4b6a6442a',
         title: formData.get('title'),
         content: formData.get('content'),
     });
@@ -48,10 +49,10 @@ export async function createArticle(prevState: State, formData: FormData)  {
     const date = new Date().toISOString().split('T')[0];
     try {
         // TODO: read how to get images from Blob Store
-        await uploadImage(formData.get('image') as File);
+        const uploadedImage = await uploadImage(formData.get('image') as File);
         await sql`
-            INSERT INTO articles (user_id, title, content, date)
-            VALUES (${userId}, ${title}, ${content}, ${date})
+            INSERT INTO articles (user_id, title, content, date, image_url)
+            VALUES (${userId}, ${title}, ${content}, ${date}, ${uploadedImage.url})
         `;
     } catch (error) {
         console.log(error)

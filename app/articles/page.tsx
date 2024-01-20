@@ -1,37 +1,61 @@
-import { Box, Card, Stack, CardBody, Heading, CardFooter, Button, Image, Text } from '@chakra-ui/react'
+import { Box, Card, CardBody, Heading, Stack, Text, VStack, Flex, Spacer } from '@chakra-ui/react'
+import Image from 'next/image';
+import { fetchFilteredArticles } from '@/app/lib/data';
+import moment from 'moment';
 
-export default function Page () {
+export default async function Page ({ searchParams }: { searchParams?: {
+    query?: string;
+    };
+}) {
+    const query = searchParams?.query || '';
+    const articles = await fetchFilteredArticles(query)
+    console.log(articles)
     return (
         <Box as='section' py={10}>
-            <Card
-                direction={{ base: 'column', sm: 'row' }}
-                overflow='hidden'
-                variant='outline'
-            >
-                <Image
-                    objectFit='cover'
-                    maxW={{ base: '100%', sm: '200px' }}
-                    src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-                    alt='Caffe Latte'
-                />
+            <VStack spacing='20px'>
+                {articles?.map(article => (
+                    <Card
+                        key={article.id}
+                        direction={{ base: 'column', sm: 'row' }}
+                        overflow='hidden'
+                        variant='outline'
+                        width='100%'
+                    >
+                        <Image
+                            priority
+                            key={article.image_url}
+                            src={article.image_url}
+                            alt="Image"
+                            width={200}
+                            height={200}
+                        />
 
-                <Stack>
-                    <CardBody>
-                        <Heading size='md'>The perfect latte</Heading>
-
-                        <Text py='2'>
-                            Caffè latte is a coffee beverage of Italian origin made with espresso
-                            and steamed milk.
-                        </Text>
-                    </CardBody>
-
-                    <CardFooter>
-                        <Button variant='solid' colorScheme='blue'>
-                            Buy Latte
-                        </Button>
-                    </CardFooter>
-                </Stack>
-            </Card>
+                        <Stack width='100%'>
+                            <CardBody>
+                                <Flex height='100%'>
+                                    <Box>
+                                        <Heading size='md'>{article.title}</Heading>
+                                        <Text py='2'>
+                                            {article.content}
+                                        </Text>
+                                    </Box>
+                                    <Spacer />
+                                    <Box>
+                                        <Flex height='100%' direction='column' alignItems='flex-end' justifyContent='space-between'>
+                                            <Text color='gray.500'>
+                                                {moment(article.date).format('D MMMM')}
+                                            </Text>
+                                            <Text fontWeight='600'>
+                                                {article.author}
+                                            </Text>
+                                        </Flex>
+                                    </Box>
+                                </Flex>
+                            </CardBody>
+                        </Stack>
+                    </Card>
+                ))}
+            </VStack>
         </Box>
     )
 }
