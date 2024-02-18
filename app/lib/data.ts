@@ -1,10 +1,12 @@
-import {sql } from '@vercel/postgres';
+import {sql} from '@vercel/postgres';
+import {Article, ArticlesList} from "@/app/lib/defenitions";
+
 const ITEMS_PER_PAGE = 15;
 export async function fetchFilteredArticles(query: string) {
     // const offset = (currentPage - 1) * ITEMS_PER_PAGE;
     try {
         // TODO: load more articles on scroll
-        const articles = await sql`
+        const articles = await sql<ArticlesList>`
             SELECT
                 articles.id,
                 articles.user_id,
@@ -24,8 +26,20 @@ export async function fetchFilteredArticles(query: string) {
       `;
 
         return articles.rows;
-    } catch (error) {
-        console.error('Database Error:', error);
+    } catch (e) {
+        console.error('Database Error:', e);
         throw new Error('Failed to fetch articles.');
+    }
+}
+
+export async function fetchArticle(id: string) {
+    try {
+        const article = await sql<Article>`
+        SELECT * FROM articles WHERE id = ${id}
+        `;
+        return article.rows[0];
+    } catch (e) {
+        console.error('Database Error:', e);
+        throw new Error('Failed to fetch article.');
     }
 }

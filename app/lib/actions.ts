@@ -12,7 +12,8 @@ const FormSchema = z.object({
     title: z.string(),
     content: z.string(),
     date: z.string(),
-    imageUrl: z.string()
+    imageUrl: z.string(),
+    tags: z.string() // TODO: make zod array validation type
 })
 
 const CreateArticle = FormSchema.omit({ id: true, date: true, imageUrl: true });
@@ -38,6 +39,7 @@ export async function createArticle(prevState: State, formData: FormData)  {
         userId: '410544b2-4001-4271-9855-fec4b6a6442a',
         title: formData.get('title'),
         content: formData.get('content'),
+        tags: formData.get('tags')
     });
     if (!validatedFields.success) {
         return {
@@ -45,14 +47,14 @@ export async function createArticle(prevState: State, formData: FormData)  {
             message: 'Missing Fields. Failed to Create Article.'
         }
     }
-    const { userId, title, content } = validatedFields.data;
+    const { userId, title, content, tags,  } = validatedFields.data;
     const date = new Date().toISOString().split('T')[0];
     try {
         // TODO: read how to get images from Blob Store
         const uploadedImage = await uploadImage(formData.get('image') as File);
         await sql`
-            INSERT INTO articles (user_id, title, content, date, image_url)
-            VALUES (${userId}, ${title}, ${content}, ${date}, ${uploadedImage.url})
+            INSERT INTO articles (user_id, title, content, date, image_url, tags)
+            VALUES (${userId}, ${title}, ${content}, ${date}, ${uploadedImage.url}, ${tags})
         `;
     } catch (error) {
         console.log(error)
