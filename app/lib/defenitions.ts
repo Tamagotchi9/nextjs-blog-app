@@ -16,3 +16,8 @@ export interface ArticlesList {
     image_url: string;
     author: string;
 }
+
+export interface Topic {
+   id?: string;
+   name: string;
+}

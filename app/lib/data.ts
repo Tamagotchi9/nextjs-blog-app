@@ -43,3 +43,21 @@ export async function fetchArticle(id: string) {
         throw new Error('Failed to fetch article.');
     }
 }
+
+export async function fetchArticleTopicsById(id: string) {
+    console.log(id);
+    try {
+        const topics = await sql`
+            SELECT
+                topics.id,
+                topics.name
+            FROM topics
+            JOIN articles_topics ON topics.id = articles_topics.topic_id
+            WHERE articles_topics.article_id = ${id}
+        `;
+        return topics.rows;
+    } catch (e) {
+        console.error('Database Error:', e);
+        throw new Error('Failed to fetch topics.');
+    }
+}
