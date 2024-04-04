@@ -1,5 +1,4 @@
 import { Suspense } from 'react';
-import { Box, VStack, Spinner } from '@chakra-ui/react'
 import ArticlesList from "@/app/ui/articles/articles-list";
 
 export default async function Page ({ searchParams }: { searchParams?: {
@@ -7,14 +6,12 @@ export default async function Page ({ searchParams }: { searchParams?: {
     };
 }) {
     const query = searchParams?.query || '';
-
+    // TODO: create fallback spinner
     return (
-        <Box as='section' py={10}>
-            <VStack spacing='20px'>
-                <Suspense fallback={<Spinner/>}>
-                    <ArticlesList query={query}/>
-                </Suspense>
-            </VStack>
-        </Box>
+        <main className="py-10">
+            <Suspense fallback="Loading...">
+                <ArticlesList query={query}/>
+            </Suspense>
+        </main>
     )
 }
