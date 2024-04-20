@@ -1,6 +1,6 @@
 import {sql} from '@vercel/postgres';
 import {Article, ArticlesList} from "@/app/lib/defenitions";
-
+// TODO: rework me with Prisma and delete me
 const ITEMS_PER_PAGE = 15;
 export async function fetchFilteredArticles(query: string) {
     // const offset = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -23,7 +23,7 @@ export async function fetchFilteredArticles(query: string) {
                 articles.title ILIKE ${`%${query}%`} OR
                 articles.content ILIKE ${`%${query}%`}
             ORDER BY articles.date DESC
-      `;
+        `;
 
         return articles.rows;
     } catch (e) {

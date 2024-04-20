@@ -8,18 +8,15 @@ import { Button } from "@/components/ui/button";
 interface HeaderProps {
     children?: React.ReactNode;
     isLogged: Boolean;
+    handleSignOut: Function;
 }
 
-export default function HeaderLayout({ children, isLogged }: HeaderProps) {
+export default function HeaderLayout({ children, isLogged, handleSignOut }: HeaderProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
-    const handleSignOut = () => {
-        // TODO: add signOut
-        // await signOut();
-        router.push('/login')
-    };
+
     const handleSearch = useDebouncedCallback((searchString: string) => {
         const params = new URLSearchParams(searchParams);
 
@@ -47,7 +44,7 @@ export default function HeaderLayout({ children, isLogged }: HeaderProps) {
                 <div>
                     {isLogged && <Link href='/articles/create'>Create Post</Link>}
                     {isLogged && <Link href='/profile'>My account</Link>}
-                    {isLogged && <Button variant='link' onClick={handleSignOut}>Logout</Button>}
+                    {isLogged && <Button variant='link' onClick={() => handleSignOut()}>Logout</Button>}
                     {!isLogged && <Link href='/login'>Login</Link>}
                 </div>
             </div>
