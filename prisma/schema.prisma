@@ -14,14 +14,16 @@ enum UserRole {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  password      String?
-  role          UserRole @default(USER)
-  accounts      Account[]
+  id                  String    @id @default(cuid())
+  name                String?
+  email               String?   @unique
+  emailVerified       DateTime?
+  image               String?
+  password            String?
+  role                UserRole @default(USER)
+  accounts            Account[]
+  isTwoFactorEnabled  Boolean @default(false)
+  twoFactorConfirmation TwoFactorConfirmation?
   // articles      Article[] // todo: do I need this?
 }
 
@@ -49,8 +51,34 @@ model VerificationToken {
   email       String
   expires     DateTime
   token       String @unique
-  
+
   @@unique([email, token])
+}
+
+model PasswordResetToken {
+  id          String @id @default(cuid())
+  email       String
+  expires     DateTime
+  token       String @unique
+
+  @@unique([email, token])
+}
+
+model TwoFactorToken {
+  id          String @id @default(cuid())
+  email       String
+  expires     DateTime
+  token       String @unique
+
+  @@unique([email, token])
+}
+
+model TwoFactorConfirmation {
+  id     String @id @default(cuid())
+
+  userId String @unique
+  user   User @relation(fields: [userId], references: [id])
+  code   String
 }
 
 // model Article {
