@@ -6,6 +6,8 @@ import Google from "next-auth/providers/google";
 import { LoginSchema } from "@/schemas";
 import {getUserByEmail} from "@/data/user";
 
+// @ts-ignore
+// @ts-ignore
 export default {
     providers: [
         GitHub({
@@ -31,6 +33,8 @@ export default {
 
                 if (passwordMatch) return user;
 
+                return null;
+            } else {
                 return null;
             }
         }
