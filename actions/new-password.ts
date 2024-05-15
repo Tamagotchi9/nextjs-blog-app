@@ -7,7 +7,7 @@ import {getPasswordResetTokenByToken} from "@/data/password-reset-token";
 import {db} from "@/lib/db";
 import {getUserByEmail} from "@/data/user";
 
-export const setNewPassword = async (values: z.infer<typeof NewPasswordSchema>, token?: string | undefined) => {
+export const setNewPassword = async (values: z.infer<typeof NewPasswordSchema>, token?: string | null) => {
     if (!token) return { error: 'Missing token!' };
 
     const validatedFields = NewPasswordSchema.safeParse(values);
