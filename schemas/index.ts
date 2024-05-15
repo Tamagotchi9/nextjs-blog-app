@@ -33,3 +33,16 @@ export const RegisterSchema = z.object({
         message: 'Name is required'
     })
 });
+
+export const ArticleSchema = z.object({
+    title: z.string().min(3, {
+        message: 'Minimum 3 characters length'
+    }),
+    content: z.string().min(10, {
+        message: 'Minimum 10 characters length'
+    }),
+    image: z.optional(z.any()),
+    authorId: z.string().cuid({
+        message: 'User is required'
+    })
+})

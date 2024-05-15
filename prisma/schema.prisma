@@ -24,7 +24,7 @@ model User {
   accounts            Account[]
   isTwoFactorEnabled  Boolean @default(false)
   twoFactorConfirmation TwoFactorConfirmation?
-  // articles      Article[] // todo: do I need this?
+  articles      Article[]
 }
 
 model Account {
@@ -81,13 +81,13 @@ model TwoFactorConfirmation {
   code   String
 }
 
-// model Article {
-//   id        String   @id @default(cuid())
-//   title     String
-//   content   String
-//   imageUrl  String?
-//   createdAt DateTime @default(now())
-//   updatedAt DateTime @updatedAt
-  // authorId  String?
-  // author    User?    @relation(fields: [authorId], references: [id])
-// }
+model Article {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  imageUrl  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime? @updatedAt
+  authorId  String
+  author    User    @relation(fields: [authorId], references: [id])
+}

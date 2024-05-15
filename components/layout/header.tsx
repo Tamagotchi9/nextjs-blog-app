@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {useRouter, useSearchParams, usePathname} from "next/navigation";
 import {useDebouncedCallback} from "use-debounce";
 import { Button } from "@/components/ui/button";
+import { Input } from '@/components/ui/input'
 
 interface HeaderProps {
     children?: React.ReactNode;
@@ -31,21 +32,21 @@ export default function HeaderLayout({ children, isLogged, handleSignOut }: Head
     return (
         <header className="h-[70px] px-5 border-b-teal-800">
             <div className="h-full flex items-center justify-between">
-                <div>
-                    <span className="text-2xl">Blog app</span>
-                        <input
-                            placeholder='Search articles'
-                            onChange={(e) => {
-                                handleSearch(e.target.value)
-                            }}
-                            defaultValue={searchParams.get('query')?.toString()}
-                        />
+                <div className="flex items-center">
+                    <Link className="text-2xl min-w-[100px] mr-5" href="/articles">Blog app</Link>
+                    <Input
+                        placeholder='Search articles'
+                        onChange={(e) => {
+                            handleSearch(e.target.value)
+                        }}
+                        defaultValue={searchParams.get('query')?.toString()}
+                    />
                 </div>
                 <div>
-                    {isLogged && <Link href='/articles/create'>Create Post</Link>}
-                    {isLogged && <Link href='/profile'>My account</Link>}
-                    {isLogged && <Button variant='link' onClick={() => handleSignOut()}>Logout</Button>}
-                    {!isLogged && <Link href='/login'>Login</Link>}
+                    {isLogged && <Button variant="link" asChild={true}><Link href='/articles/create'>Create post</Link></Button>}
+                    {isLogged && <Button variant="link" asChild={true}><Link href='/profile'>My account</Link></Button>}
+                    {isLogged && <Button variant="link" onClick={() => handleSignOut()}>Logout</Button>}
+                    {!isLogged && <Button variant="link" asChild={true}><Link href='/login'>Login</Link></Button>}
                 </div>
             </div>
         </header>

@@ -1,4 +1,4 @@
-import HeaderLayout from "@/app/ui/layout/header";
+import HeaderLayout from "@/components/layout/header";
 import {auth, signOut} from '@/auth'
 
 export default async function Layout({ children }: { children: React.ReactNode }) {

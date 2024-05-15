@@ -1,11 +1,14 @@
-import Form from '@/app/ui/articles/create-form';
-import GoBackButton from "@/app/ui/elements/go-back-button";
+import { auth } from "@/auth"
 
+import GoBackButton from "@/app/ui/elements/go-back-button";
+import {CreateForm} from "@/components/articles/create-form";
 export default async function Page() {
+    const session = await auth();
+
     return (
         <main>
             <GoBackButton route={'/articles'} />
-            <Form/>
+            <CreateForm user={session?.user}/>
         </main>
     );
 }
