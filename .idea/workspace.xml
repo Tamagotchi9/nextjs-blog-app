@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/nextjs-blog-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/handler/[...stack]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/rich-text-editor/toolbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/0000_natural_lady_bullseye.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/db.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/meta/0000_snapshot.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/meta/_journal.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/schema/article.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/schema/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle/schemaHelpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/article.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/articles/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/create/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/articles/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/articles/[id]/article-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/[id]/article-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/articles/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/auth/register-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/auth/register-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/elements/go-back-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/elements/go-back-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/layout/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/layout/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2dVpiRpQCni5hS5O7GOvX0GwSEf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/frontend/nextjs-blog-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\frontend\nextjs-blog-app\components\auth" />
+      <recent name="D:\frontend\nextjs-blog-app\app\auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\frontend\nextjs-blog-app" />
+      <recent name="D:\frontend\nextjs-blog-app\src" />
+      <recent name="D:\frontend\nextjs-blog-app\drizzle" />
+      <recent name="D:\frontend\nextjs-blog-app\drizzle\schema" />
+      <recent name="D:\frontend\nextjs-blog-app\components\auth" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17011.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="init profile page" />
+      <created>1710103228905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710103228905</updated>
+      <workItem from="1710103234362" duration="1364000" />
+      <workItem from="1710145426213" duration="272000" />
+      <workItem from="1710235173132" duration="3978000" />
+      <workItem from="1712084477394" duration="4092000" />
+      <workItem from="1712127461729" duration="598000" />
+      <workItem from="1712151681154" duration="8580000" />
+      <workItem from="1712214651103" duration="520000" />
+      <workItem from="1712302900767" duration="597000" />
+      <workItem from="1712349588798" duration="3575000" />
+      <workItem from="1712391895643" duration="1892000" />
+      <workItem from="1712476517617" duration="46000" />
+      <workItem from="1712826760376" duration="778000" />
+      <workItem from="1750917071237" duration="4880000" />
+      <workItem from="1750936000707" duration="1320000" />
+      <workItem from="1750938648189" duration="220000" />
+      <workItem from="1750941207677" duration="8910000" />
+      <workItem from="1751019874057" duration="9416000" />
+      <workItem from="1751214471525" duration="986000" />
+      <workItem from="1751271061705" duration="474000" />
+      <workItem from="1751823556507" duration="5031000" />
+      <workItem from="1751828686190" duration="2965000" />
+      <workItem from="1751874986600" duration="20000" />
+      <workItem from="1751911336084" duration="5351000" />
+      <workItem from="1751960946767" duration="47000" />
+      <workItem from="1752002823692" duration="1098000" />
+      <workItem from="1752048434859" duration="288000" />
+      <workItem from="1752082543829" duration="2888000" />
+    </task>
+    <task id="LOCAL-00001" summary="added back btn">
+      <option name="closed" value="true" />
+      <created>1712084536190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712084536190</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change libraries">
+      <option name="closed" value="true" />
+      <created>1712257903762</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712257903762</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added register page">
+      <option name="closed" value="true" />
+      <created>1712393800768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712393800768</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/tailwind.config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="added back btn" />
+    <MESSAGE value="change libraries" />
+    <MESSAGE value="added register page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added register page" />
+  </component>
+</project>
