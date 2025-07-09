@@ -1,10 +1,8 @@
-import { fetchArticle, fetchArticleTopicsById } from "@/app/lib/data";
-import ArticleView from "@/app/ui/articles/[id]/article-view";
+import {ArticleView} from "@/components/articles/article-view";
+import { getArticle } from "@/data/article";
 
 export default async function ArticlePage ({ params }: { params: { id: string } }) {
-    const article = await fetchArticle(params.id);
-    const topics = await fetchArticleTopicsById(params.id);
-    console.log(topics);
+    const article = await getArticle(params.id);
     if (!article) {
         return
     }

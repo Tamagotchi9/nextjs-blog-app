@@ -1,0 +1,93 @@
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model User {
+  id                  String    @id @default(cuid())
+  name                String?
+  email               String?   @unique
+  emailVerified       DateTime?
+  image               String?
+  password            String?
+  role                UserRole @default(USER)
+  accounts            Account[]
+  isTwoFactorEnabled  Boolean @default(false)
+  twoFactorConfirmation TwoFactorConfirmation?
+  articles      Article[]
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  @db.Text
+  access_token       String?  @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  @db.Text
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model VerificationToken {
+  id          String @id @default(cuid())
+  email       String
+  expires     DateTime
+  token       String @unique
+
+  @@unique([email, token])
+}
+
+model PasswordResetToken {
+  id          String @id @default(cuid())
+  email       String
+  expires     DateTime
+  token       String @unique
+
+  @@unique([email, token])
+}
+
+model TwoFactorToken {
+  id          String @id @default(cuid())
+  email       String
+  expires     DateTime
+  token       String @unique
+
+  @@unique([email, token])
+}
+
+model TwoFactorConfirmation {
+  id     String @id @default(cuid())
+
+  userId String @unique
+  user   User @relation(fields: [userId], references: [id])
+  code   String
+}
+
+model Article {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  imageUrl  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime? @updatedAt
+  authorId  String
+  author    User    @relation(fields: [authorId], references: [id])
+}
