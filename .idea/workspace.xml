@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="deleted old logic">
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="deleted old auth button">
+      <change beforePath="$PROJECT_DIR$/app/articles/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/[id]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +115,7 @@
       <workItem from="1752002823692" duration="1098000" />
       <workItem from="1752048434859" duration="288000" />
       <workItem from="1752082543829" duration="2888000" />
-      <workItem from="1752085473113" duration="5308000" />
+      <workItem from="1752085473113" duration="5660000" />
     </task>
     <task id="LOCAL-00001" summary="added back btn">
       <option name="closed" value="true" />
@@ -197,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752091681936</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="deleted old auth button">
+      <option name="closed" value="true" />
+      <created>1752091943120</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1752091943120</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +222,7 @@
     <MESSAGE value="created zod schema for create article form" />
     <MESSAGE value="reworked article create form" />
     <MESSAGE value="deleted old logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted old logic" />
+    <MESSAGE value="deleted old auth button" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted old auth button" />
   </component>
 </project>
