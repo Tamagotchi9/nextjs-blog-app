@@ -1,38 +1,101 @@
 'use client';
 
-import { Flex, Box, Input, Textarea, Button, Badge, Text } from '@chakra-ui/react'
-import { useFormState } from 'react-dom';
-import {createArticle, createTopic} from '@/app/lib/actions';
-import {SubmitButton} from "@/app/ui/articles/button";
-import {useState} from "react";
-import { Topic } from "@/app/lib/defenitions";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form'
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {ArticleFormSchema} from "@/schemas/article";
+import {Input} from "@/components/ui/input";
+import { z } from 'zod'
+import {LexicalComposer} from '@lexical/react/LexicalComposer';
+import {RichTextPlugin} from "@lexical/react/LexicalRichTextPlugin";
+import {LexicalErrorBoundary} from "@lexical/react/LexicalErrorBoundary";
+import {ContentEditable} from "@lexical/react/LexicalContentEditable";
+import {HistoryPlugin} from "@lexical/react/LexicalHistoryPlugin";
+import {AutoFocusPlugin} from "@lexical/react/LexicalAutoFocusPlugin";
+import ToolbarPlugin from "@/app/ui/rich-text-editor/toolbar";
+import {Button} from "@/components/ui/button";
+import {db} from "@/drizzle/db";
+import {ArticleTable} from "@/drizzle/schema/article";
+import {useUser} from "@stackframe/stack";
+import {useRouter} from "next/navigation";
 
-export default function Form() {
-    const [topic, setTopic] = useState<Topic>({ name: '' });
-    const [topics, setTopics] = useState<Topic[]>([]);
-    const addTopic = () => {
-        setTopics((val) => [...val, topic])
+export default function CreateForm() {
+    const router = useRouter()
+    const user = useUser();
+    const form = useForm<z.infer<typeof ArticleFormSchema>>({
+        resolver: zodResolver(ArticleFormSchema),
+        defaultValues: {
+            title: '',
+            content: ''
+        }
+    })
+    if (!user) {
+        router.push('/articles')
+        return
+    }
+    const onError = (error: Error | string | null) => {
+        console.log(error)
+    }
+    const initialConfig = {
+        namespace: 'MyEditor',
+        onError,
     };
-    const initialState = { message: null, errors: {} };
-    const createAriclesWithTopics = createArticle.bind(null, topics)
-    // TODO: find a solution for this TS error
-    const [state, dispatch] = useFormState(createAriclesWithTopics, initialState);
-    // const [stateTopic, dispatchTopic] = useFormState(createTopic, initialState)
-
+    const onSubmit = async (values: z.infer<typeof ArticleFormSchema>) => {
+        await fetch('/api/articles', {
+            method: 'POST',
+            body: JSON.stringify({
+                ...values,
+                authorId: user?.id
+            })
+        })
+    }
     return (
-        <div>
-            <Box as='form' action={dispatch}>
-                <Input type='file' id='image' name='image' placeholder='Your story image preview'/>
-                <Input placeholder='Your story title' id='title' name='title'/>
-                <Textarea placeholder='Your story' id='content' name='content'/>
-                <SubmitButton>Publish</SubmitButton>
-            </Box>
-            <Box as='form'>
-                <Text>You can label you blog article by a topic</Text>
-                <Input placeholder='Your story topic' value={topic.name} onChange={(e) => setTopic((val) => ({...val, name: e.target.value}))}/>
-                <Button onClick={addTopic}>Add topic</Button>
-            </Box>
-            {!!topics.length && topics.map((topic, idx) => (<Badge key={idx}>{topic.name}</Badge>))}
-        </div>
+        <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-[600px] mx-auto">
+                <FormField control={form.control} name="title" render={({ field }) => (
+                    <FormItem>
+                        <FormLabel>Article title</FormLabel>
+                        <FormControl>
+                            <Input placeholder="title" {...field} />
+                        </FormControl>
+                        <FormMessage/>
+                    </FormItem>
+                )}/>
+                <FormField control={form.control} name="content" render={({ field }) => (
+                    <FormItem>
+                        <FormLabel>Article content</FormLabel>
+                        <FormControl>
+                            <Input placeholder="content" {...field} />
+                            {/*<LexicalComposer initialConfig={initialConfig}>*/}
+                            {/*    <ToolbarPlugin/>*/}
+                            {/*    <RichTextPlugin*/}
+                            {/*        {...field}*/}
+                            {/*        contentEditable={*/}
+                            {/*            <ContentEditable*/}
+                            {/*                aria-placeholder={'Enter some text...'}*/}
+                            {/*                placeholder={<div>Enter some text...</div>}*/}
+                            {/*            />*/}
+                            {/*        }*/}
+                            {/*        ErrorBoundary={LexicalErrorBoundary}*/}
+                            {/*    />*/}
+                            {/*    <HistoryPlugin />*/}
+                            {/*    <AutoFocusPlugin />*/}
+                            {/*</LexicalComposer>*/}
+                        </FormControl>
+                        <FormMessage/>
+                    </FormItem>
+                )}/>
+                <FormField control={form.control} name="imageUrl" render={({ field }) => (
+                    <FormItem>
+                        <FormLabel>Article image</FormLabel>
+                        <FormControl>
+                            <Input type="file" placeholder="image" {...field} />
+                        </FormControl>
+                        <FormMessage/>
+                    </FormItem>
+                )}/>
+                <Button className="mt-10" type="submit">Submit form</Button>
+            </form>
+        </Form>
     )
 }

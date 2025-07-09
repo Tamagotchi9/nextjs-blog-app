@@ -4,50 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/nextjs-blog-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handler/[...stack]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/loading.tsx" afterDir="false" />
+    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="created zod schema for create article form">
+      <change afterPath="$PROJECT_DIR$/app/api/articles/route.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/ui/rich-text-editor/toolbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/0000_natural_lady_bullseye.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/db.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/meta/0000_snapshot.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/meta/_journal.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/schema/article.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/schema/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drizzle/schemaHelpers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/article.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stack.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/articles/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/create/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/articles/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/articles/[id]/article-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/[id]/article-view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/articles/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/auth/register-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/auth/register-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/elements/go-back-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/elements/go-back-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/layout/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/layout/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +61,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\frontend\\nextjs-blog-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -157,6 +120,7 @@
       <workItem from="1752002823692" duration="1098000" />
       <workItem from="1752048434859" duration="288000" />
       <workItem from="1752082543829" duration="2888000" />
+      <workItem from="1752085473113" duration="3640000" />
     </task>
     <task id="LOCAL-00001" summary="added back btn">
       <option name="closed" value="true" />
@@ -182,7 +146,47 @@
       <option name="project" value="LOCAL" />
       <updated>1712393800768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added Neon Postgres DB and Drizzle ORM">
+      <option name="closed" value="true" />
+      <created>1752085747403</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752085747403</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added Stack Auth">
+      <option name="closed" value="true" />
+      <created>1752085898453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752085898453</updated>
+    </task>
+    <task id="LOCAL-00006" summary="switched from chakra-ui to shadcn">
+      <option name="closed" value="true" />
+      <created>1752086003577</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752086003577</updated>
+    </task>
+    <task id="LOCAL-00007" summary="switched from chakra-ui to shadcn">
+      <option name="closed" value="true" />
+      <created>1752086065687</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752086065687</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created zod schema for create article form">
+      <option name="closed" value="true" />
+      <created>1752089994020</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752089994020</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +202,10 @@
     <MESSAGE value="added back btn" />
     <MESSAGE value="change libraries" />
     <MESSAGE value="added register page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added register page" />
+    <MESSAGE value="added Neon Postgres DB and Drizzle ORM" />
+    <MESSAGE value="added Stack Auth" />
+    <MESSAGE value="switched from chakra-ui to shadcn" />
+    <MESSAGE value="created zod schema for create article form" />
+    <option name="LAST_COMMIT_MESSAGE" value="created zod schema for create article form" />
   </component>
 </project>
