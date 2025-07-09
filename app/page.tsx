@@ -1,8 +1,8 @@
 import { Montserrat } from "next/font/google";
 
 import { cn } from "@/lib/utils";
-import { Button } from '@/components/ui/button'
-import { IntroButton } from "@/components/auth/intro-button";
+import Link from 'next/link'
+import {Button} from "@/components/ui/button";
 
 const font = Montserrat({
     subsets: ['latin'],
@@ -18,9 +18,9 @@ export default async function Home() {
                   font.className,
               )}>Everyday blog that matters!</h1>
               <p className={cn("text-xl text-white", font.className)}>Share. Read. Care.</p>
-              <IntroButton>
-                  <Button size='lg'>Go to blog</Button>
-              </IntroButton>
+              <Link href="/articles">
+                  <Button>Go to articles</Button>
+              </Link>
           </div>
       </main>
   )

@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="reworked article create form">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/create-article.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/login.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/new-password.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/new-verification.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/register.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/reset.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/articles/article-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/articles/article-view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/articles/articles-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/articles/articles-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/articles/create-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/back-button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/card-wrapper.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/error-card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/intro-button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/login-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/new-password-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/new-verification-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/register-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/reset-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/social.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/article.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/password-reset-token.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/two-factor-confirmation.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/two-factor-token.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/verification-token.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/db.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/mail.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tokens.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next-auth.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemas/index.ts" beforeDir="false" />
+    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="deleted old logic">
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +115,7 @@
       <workItem from="1752002823692" duration="1098000" />
       <workItem from="1752048434859" duration="288000" />
       <workItem from="1752082543829" duration="2888000" />
-      <workItem from="1752085473113" duration="4970000" />
+      <workItem from="1752085473113" duration="5308000" />
     </task>
     <task id="LOCAL-00001" summary="added back btn">
       <option name="closed" value="true" />
@@ -223,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752090181092</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="deleted old logic">
+      <option name="closed" value="true" />
+      <created>1752091681936</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752091681936</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +213,7 @@
     <MESSAGE value="switched from chakra-ui to shadcn" />
     <MESSAGE value="created zod schema for create article form" />
     <MESSAGE value="reworked article create form" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworked article create form" />
+    <MESSAGE value="deleted old logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted old logic" />
   </component>
 </project>
