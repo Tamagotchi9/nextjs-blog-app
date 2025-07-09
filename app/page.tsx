@@ -9,7 +9,7 @@ const font = Montserrat({
     weight: ['600']
 });
 
-export default function Home() {
+export default async function Home() {
   return (
       <main className="h-full flex flex-col items-center justify-center bg-emerald-600">
           <div className='space-y-6 text-center'>
