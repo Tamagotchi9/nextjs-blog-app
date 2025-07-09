@@ -4,13 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="created zod schema for create article form">
-      <change afterPath="$PROJECT_DIR$/app/api/articles/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ui/rich-text-editor/toolbar.tsx" afterDir="false" />
+    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="reworked article create form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/articles/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/create/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/create-article.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/login.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/new-password.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/new-verification.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/register.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/reset.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/articles/article-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/articles/article-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/articles/articles-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/articles/articles-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/articles/create-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/back-button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/card-wrapper.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/error-card.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/intro-button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/login-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/new-password-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/new-verification-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/register-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/reset-form.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/social.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/article.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/password-reset-token.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/two-factor-confirmation.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/two-factor-token.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/user.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/verification-token.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/db.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tokens.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next-auth.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/schemas/index.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,28 +72,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/frontend/nextjs-blog-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "D:\\frontend\\nextjs-blog-app\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/frontend/nextjs-blog-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\frontend\\nextjs-blog-app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\frontend\nextjs-blog-app\components\auth" />
@@ -120,7 +149,7 @@
       <workItem from="1752002823692" duration="1098000" />
       <workItem from="1752048434859" duration="288000" />
       <workItem from="1752082543829" duration="2888000" />
-      <workItem from="1752085473113" duration="3640000" />
+      <workItem from="1752085473113" duration="4970000" />
     </task>
     <task id="LOCAL-00001" summary="added back btn">
       <option name="closed" value="true" />
@@ -186,16 +215,19 @@
       <option name="project" value="LOCAL" />
       <updated>1752089994020</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="reworked article create form">
+      <option name="closed" value="true" />
+      <created>1752090181092</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752090181092</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/tailwind.config.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -206,6 +238,7 @@
     <MESSAGE value="added Stack Auth" />
     <MESSAGE value="switched from chakra-ui to shadcn" />
     <MESSAGE value="created zod schema for create article form" />
-    <option name="LAST_COMMIT_MESSAGE" value="created zod schema for create article form" />
+    <MESSAGE value="reworked article create form" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworked article create form" />
   </component>
 </project>

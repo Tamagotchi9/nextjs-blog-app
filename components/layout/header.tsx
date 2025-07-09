@@ -13,7 +13,6 @@ interface HeaderProps {
 }
 
 export default function HeaderLayout({ children, isLogged, handleSignOut }: HeaderProps) {
-    const router = useRouter();
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
