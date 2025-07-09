@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { StackProvider, StackTheme } from "@stackframe/stack";
+import { stackServerApp } from "../stack";
 import './globals.css'
 import { fonts } from './fonts'
 
@@ -14,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={fonts.rubik.variable}>
-      <body>
+      <body><StackProvider app={stackServerApp}><StackTheme>
         {children}
-      </body>
+      </StackTheme></StackProvider></body>
     </html>
   )
 }
