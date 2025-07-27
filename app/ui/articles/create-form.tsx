@@ -6,21 +6,11 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {ArticleFormSchema} from "@/schemas/article";
 import {Input} from "@/components/ui/input";
 import { z } from 'zod'
-import {LexicalComposer} from '@lexical/react/LexicalComposer';
-import {RichTextPlugin} from "@lexical/react/LexicalRichTextPlugin";
-import {LexicalErrorBoundary} from "@lexical/react/LexicalErrorBoundary";
-import {ContentEditable} from "@lexical/react/LexicalContentEditable";
-import {HistoryPlugin} from "@lexical/react/LexicalHistoryPlugin";
-import {AutoFocusPlugin} from "@lexical/react/LexicalAutoFocusPlugin";
-import ToolbarPlugin from "@/app/ui/rich-text-editor/toolbar";
 import {Button} from "@/components/ui/button";
-import {db} from "@/drizzle/db";
-import {ArticleTable} from "@/drizzle/schema/article";
 import {useUser} from "@stackframe/stack";
-import {useRouter} from "next/navigation";
+import RichTextEditor from "@/components/rich-text-editor";
 
 export default function CreateForm() {
-    const router = useRouter()
     const user = useUser();
     const form = useForm<z.infer<typeof ArticleFormSchema>>({
         resolver: zodResolver(ArticleFormSchema),
@@ -29,17 +19,7 @@ export default function CreateForm() {
             content: ''
         }
     })
-    if (!user) {
-        router.push('/articles')
-        return
-    }
-    const onError = (error: Error | string | null) => {
-        console.log(error)
-    }
-    const initialConfig = {
-        namespace: 'MyEditor',
-        onError,
-    };
+
     const onSubmit = async (values: z.infer<typeof ArticleFormSchema>) => {
         await fetch('/api/articles', {
             method: 'POST',
@@ -51,7 +31,7 @@ export default function CreateForm() {
     }
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-[600px] mx-auto">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-[1200px] mx-auto">
                 <FormField control={form.control} name="title" render={({ field }) => (
                     <FormItem>
                         <FormLabel>Article title</FormLabel>
@@ -65,22 +45,7 @@ export default function CreateForm() {
                     <FormItem>
                         <FormLabel>Article content</FormLabel>
                         <FormControl>
-                            <Input placeholder="content" {...field} />
-                            {/*<LexicalComposer initialConfig={initialConfig}>*/}
-                            {/*    <ToolbarPlugin/>*/}
-                            {/*    <RichTextPlugin*/}
-                            {/*        {...field}*/}
-                            {/*        contentEditable={*/}
-                            {/*            <ContentEditable*/}
-                            {/*                aria-placeholder={'Enter some text...'}*/}
-                            {/*                placeholder={<div>Enter some text...</div>}*/}
-                            {/*            />*/}
-                            {/*        }*/}
-                            {/*        ErrorBoundary={LexicalErrorBoundary}*/}
-                            {/*    />*/}
-                            {/*    <HistoryPlugin />*/}
-                            {/*    <AutoFocusPlugin />*/}
-                            {/*</LexicalComposer>*/}
+                            <RichTextEditor field={field} />
                         </FormControl>
                         <FormMessage/>
                     </FormItem>

@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="deleted old auth button">
-      <change beforePath="$PROJECT_DIR$/app/articles/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/[id]/page.tsx" afterDir="false" />
+    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="fix error">
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/arrow-clockwise.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/arrow-counterclockwise.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/justify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/text-center.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/text-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/text-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-bold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-italic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-strikethrough.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-underline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/rich-text-editor.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/RichTextEditorStylesConfig.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/RichTextEditorThemeConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +62,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/frontend/nextjs-blog-app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/frontend/nextjs-blog-app/assets/images/svg&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -62,15 +77,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\frontend\nextjs-blog-app\assets\images\svg" />
       <recent name="D:\frontend\nextjs-blog-app\components\auth" />
       <recent name="D:\frontend\nextjs-blog-app\app\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\frontend\nextjs-blog-app\components" />
       <recent name="D:\frontend\nextjs-blog-app" />
       <recent name="D:\frontend\nextjs-blog-app\src" />
       <recent name="D:\frontend\nextjs-blog-app\drizzle" />
       <recent name="D:\frontend\nextjs-blog-app\drizzle\schema" />
-      <recent name="D:\frontend\nextjs-blog-app\components\auth" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -115,7 +131,11 @@
       <workItem from="1752002823692" duration="1098000" />
       <workItem from="1752048434859" duration="288000" />
       <workItem from="1752082543829" duration="2888000" />
-      <workItem from="1752085473113" duration="5660000" />
+      <workItem from="1752085473113" duration="6211000" />
+      <workItem from="1752134731803" duration="35000" />
+      <workItem from="1753474854649" duration="3780000" />
+      <workItem from="1753543380339" duration="3784000" />
+      <workItem from="1753599928618" duration="4767000" />
     </task>
     <task id="LOCAL-00001" summary="added back btn">
       <option name="closed" value="true" />
@@ -205,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752091943120</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix error">
+      <option name="closed" value="true" />
+      <created>1752092172686</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752092172686</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +251,7 @@
     <MESSAGE value="reworked article create form" />
     <MESSAGE value="deleted old logic" />
     <MESSAGE value="deleted old auth button" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted old auth button" />
+    <MESSAGE value="fix error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix error" />
   </component>
 </project>
