@@ -9,6 +9,7 @@ import { z } from 'zod'
 import {Button} from "@/components/ui/button";
 import {useUser} from "@stackframe/stack";
 import RichTextEditor from "@/components/rich-text-editor";
+import {getLexicalDescription} from "@/services/lexical/helpers/descriptionExtractor";
 
 export default function CreateForm() {
     const user = useUser();
@@ -25,6 +26,7 @@ export default function CreateForm() {
             method: 'POST',
             body: JSON.stringify({
                 ...values,
+                description: getLexicalDescription(values.content),
                 authorId: user?.id
             })
         })
@@ -45,7 +47,7 @@ export default function CreateForm() {
                     <FormItem>
                         <FormLabel>Article content</FormLabel>
                         <FormControl>
-                            <RichTextEditor field={field} />
+                            <RichTextEditor onChange={field.onChange} />
                         </FormControl>
                         <FormMessage/>
                     </FormItem>

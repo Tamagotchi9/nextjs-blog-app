@@ -4,8 +4,8 @@ export interface Article {
     title: string
     content: string
     description: string
-    imageUrl: string
-    createdAt: string
-    updatedAt: string
-    postedAt: string
+    imageUrl: string | null
+    createdAt: Date
+    updatedAt: Date
+    postedAt: Date | null
 }
