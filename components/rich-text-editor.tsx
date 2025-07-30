@@ -20,13 +20,12 @@ import {parseAllowedColor, parseAllowedFontSize} from "@/lib/RichTextEditorStyle
 import {useLexicalComposerContext} from "@lexical/react/LexicalComposerContext";
 import {useEffect} from "react";
 import {EditorState} from "lexical";
-import { ControllerRenderProps } from "react-hook-form";
 
-interface Props {
-    field: ControllerRenderProps
+interface RichTextEditorProps {
+    onChange: (editorState: string) => void
 }
 
-export default function RichTextEditor({field}: Props) {
+export default function RichTextEditor({onChange}: RichTextEditorProps) {
     const placeholder = 'Tell us your story';
 
     const getExtraStyles = (element: HTMLElement): string => {
@@ -137,9 +136,9 @@ export default function RichTextEditor({field}: Props) {
         theme: richTextEditorThemeConfig,
     };
 
-    const onChange = (editorState: EditorState) => {
+    const onEditorChange = (editorState: EditorState) => {
         const editorStateJSON = editorState?.toJSON();
-        field.onChange(JSON.stringify(editorStateJSON))
+        onChange(JSON.stringify(editorStateJSON))
     }
 
     return (
@@ -161,7 +160,7 @@ export default function RichTextEditor({field}: Props) {
                     />
                     <HistoryPlugin />
                     <AutoFocusPlugin />
-                    <MyOnChangePlugin onChange={onChange}/>
+                    <MyOnChangePlugin onChange={onEditorChange}/>
                 </div>
             </div>
         </LexicalComposer>

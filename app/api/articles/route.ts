@@ -1,6 +1,5 @@
 import {db} from "@/drizzle/db";
 import {ArticleTable} from "@/drizzle/schema/article";
-import { type NextResponse } from 'next/server'
 
 export async function POST(request: Request): Promise<Response> {
     try {
