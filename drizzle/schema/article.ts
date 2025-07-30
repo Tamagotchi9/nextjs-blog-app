@@ -12,7 +12,8 @@ export const ArticleTable = pgTable('articles', {
     createdAt,
     updatedAt,
     postedAt: timestamp({ withTimezone: true }),
-    authorId: text().references(() => UserSyncTable.id).notNull()
+    authorId: text().references(() => UserSyncTable.id).notNull(),
+    description: varchar().notNull(),
 })
 
 export const ArticleTableRelations = relations(ArticleTable, ({ one }) => ({
