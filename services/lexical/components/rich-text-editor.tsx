@@ -1,3 +1,5 @@
+'use client';
+
 import ToolbarPlugin from "@/app/ui/rich-text-editor/toolbar";
 import {RichTextPlugin} from "@lexical/react/LexicalRichTextPlugin";
 import {ContentEditable} from "@lexical/react/LexicalContentEditable";
@@ -15,6 +17,7 @@ import {
     ParagraphNode,
     TextNode
 } from "lexical";
+import { HeadingNode } from "@lexical/rich-text";
 import {richTextEditorThemeConfig} from "@/lib/RichTextEditorThemeConfig";
 import {parseAllowedColor, parseAllowedFontSize} from "@/lib/RichTextEditorStylesConfig";
 import {useLexicalComposerContext} from "@lexical/react/LexicalComposerContext";
@@ -121,6 +124,7 @@ export default function RichTextEditor({onChange}: RichTextEditorProps) {
     >([
         [ParagraphNode, removeStylesExportDOM],
         [TextNode, removeStylesExportDOM],
+        [HeadingNode, removeStylesExportDOM],
     ]);
 
     const editorConfig = {
@@ -128,8 +132,8 @@ export default function RichTextEditor({onChange}: RichTextEditorProps) {
             export: exportMap,
             import: constructImportMap(),
         },
-        namespace: 'React.js Demo',
-        nodes: [ParagraphNode, TextNode],
+        namespace: 'Blog app',
+        nodes: [ParagraphNode, TextNode, HeadingNode],
         onError(error: Error) {
             throw error;
         },

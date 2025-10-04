@@ -8,7 +8,7 @@ import {Input} from "@/components/ui/input";
 import { z } from 'zod'
 import {Button} from "@/components/ui/button";
 import {useUser} from "@stackframe/stack";
-import RichTextEditor from "@/components/rich-text-editor";
+import RichTextEditor from "@/services/lexical/components/rich-text-editor";
 import {getLexicalDescription} from "@/services/lexical/helpers/descriptionExtractor";
 
 export default function CreateForm() {

@@ -4,23 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="fix error">
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/arrow-clockwise.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/arrow-counterclockwise.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/justify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/text-center.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/text-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/text-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-bold.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-strikethrough.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svg/type-underline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/rich-text-editor.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/RichTextEditorStylesConfig.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/RichTextEditorThemeConfig.ts" afterDir="false" />
+    <list default="true" id="ebb8a819-9404-4e67-a158-0f8882c4ad5b" name="Changes" comment="added read only RTE, added titles for toolbar">
+      <change afterPath="$PROJECT_DIR$/services/lexical/components/read-only-editor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/articles/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/articles/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/articles/create-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/rich-text-editor/toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/rich-text-editor/toolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/articles/article-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/articles/article-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/rich-text-editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/lexical/components/rich-text-editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +25,31 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Tamagotchi9&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Tamagotchi9/nextjs-blog-app.git&quot;,
+    &quot;accountId&quot;: &quot;98b44820-4d36-4a11-a308-8e1669df3a9b&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@lexical/rich-text/index.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/@lexical/selection/range-selection.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/lexical/LexicalCommands.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/lexical/nodes/LexicalTextNode.d.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,9 +71,14 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/frontend/nextjs-blog-app/assets/images/svg&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -71,6 +88,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\frontend\\nextjs-blog-app\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -82,17 +100,32 @@
       <recent name="D:\frontend\nextjs-blog-app\app\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\frontend\nextjs-blog-app\services\lexical\components" />
       <recent name="D:\frontend\nextjs-blog-app\components" />
       <recent name="D:\frontend\nextjs-blog-app" />
       <recent name="D:\frontend\nextjs-blog-app\src" />
       <recent name="D:\frontend\nextjs-blog-app\drizzle" />
-      <recent name="D:\frontend\nextjs-blog-app\drizzle\schema" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17011.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-WS-252.26199.162" />
       </set>
     </attachedChunks>
   </component>
@@ -135,7 +168,27 @@
       <workItem from="1752134731803" duration="35000" />
       <workItem from="1753474854649" duration="3780000" />
       <workItem from="1753543380339" duration="3784000" />
-      <workItem from="1753599928618" duration="4767000" />
+      <workItem from="1753599928618" duration="7491000" />
+      <workItem from="1753689603836" duration="10000" />
+      <workItem from="1753818705481" duration="4432000" />
+      <workItem from="1753857385832" duration="7000" />
+      <workItem from="1753907129566" duration="3011000" />
+      <workItem from="1753949416075" duration="8000" />
+      <workItem from="1754334531119" duration="2992000" />
+      <workItem from="1754379217196" duration="42000" />
+      <workItem from="1754501897929" duration="6958000" />
+      <workItem from="1754550737211" duration="179000" />
+      <workItem from="1754730847549" duration="3568000" />
+      <workItem from="1754745579648" duration="854000" />
+      <workItem from="1754830275907" duration="205000" />
+      <workItem from="1754830522680" duration="9000" />
+      <workItem from="1756824262782" duration="361000" />
+      <workItem from="1756884588222" duration="38000" />
+      <workItem from="1756922341409" duration="2564000" />
+      <workItem from="1756974387398" duration="296000" />
+      <workItem from="1757144276575" duration="682000" />
+      <workItem from="1757249352421" duration="104000" />
+      <workItem from="1759583239596" duration="1155000" />
     </task>
     <task id="LOCAL-00001" summary="added back btn">
       <option name="closed" value="true" />
@@ -233,7 +286,63 @@
       <option name="project" value="LOCAL" />
       <updated>1752092172686</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added base version of Lexical to create blog post content">
+      <option name="closed" value="true" />
+      <created>1753605523565</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753605523565</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added Article to definitions">
+      <option name="closed" value="true" />
+      <created>1753907213929</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753907213929</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added 'description' column to Article table">
+      <option name="closed" value="true" />
+      <created>1753907328064</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753907328064</updated>
+    </task>
+    <task id="LOCAL-00016" summary="changed create-form validation error text">
+      <option name="closed" value="true" />
+      <created>1753907347224</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753907347224</updated>
+    </task>
+    <task id="LOCAL-00017" summary="created Article interface">
+      <option name="closed" value="true" />
+      <created>1753907538298</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1753907538298</updated>
+    </task>
+    <task id="LOCAL-00018" summary="created articles-list and articles-card">
+      <option name="closed" value="true" />
+      <created>1753907564733</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1753907564733</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactored rich-text-editor.tsx">
+      <option name="closed" value="true" />
+      <created>1753907598621</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1753907598621</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +361,14 @@
     <MESSAGE value="deleted old logic" />
     <MESSAGE value="deleted old auth button" />
     <MESSAGE value="fix error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix error" />
+    <MESSAGE value="added base version of Lexical to create blog post content" />
+    <MESSAGE value="added Article to definitions" />
+    <MESSAGE value="added 'description' column to Article table" />
+    <MESSAGE value="changed create-form validation error text" />
+    <MESSAGE value="created Article interface" />
+    <MESSAGE value="created articles-list and articles-card" />
+    <MESSAGE value="refactored rich-text-editor.tsx" />
+    <MESSAGE value="added read only RTE, added titles for toolbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="added read only RTE, added titles for toolbar" />
   </component>
 </project>
