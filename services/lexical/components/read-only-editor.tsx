@@ -8,6 +8,7 @@ import {LexicalComposer} from "@lexical/react/LexicalComposer";
 import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
 import { TextNode, ParagraphNode } from "lexical";
 import { HeadingNode } from "@lexical/rich-text";
+import {LexicalErrorBoundary} from "@lexical/react/LexicalErrorBoundary";
 
 type Props = {
     initialJson: string;
@@ -43,7 +44,7 @@ export const ReadOnlyEditor = ({initialJson}: Props) => {
             <RichTextPlugin
                 contentEditable={<ContentEditable className="prose"/>}
                 placeholder={null}
-                ErrorBoundary={null}
+                ErrorBoundary={LexicalErrorBoundary}
             />
             <HistoryPlugin />
             <ReadOnlyPlugin initialJson={initialJson} />

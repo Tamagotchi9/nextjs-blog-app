@@ -104,7 +104,7 @@ export default function RichTextEditor({onChange}: RichTextEditorProps) {
             // Remove all inline styles and classes if the element is an HTMLElement
             // Children are checked as well since TextNode can be nested
             // in i, b, and strong tags.
-            for (const el of [
+	        for (const el of [
                 output.element,
                 ...output.element.querySelectorAll('[style],[class],[dir="ltr"]'),
             ]) {
